@@ -1,4 +1,6 @@
 let inputPasswod = document.getElementById("Passwod");
+let copyPassword = document.getElementById("copy");
+
 let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let lowerCase = "abcdefghijklmnopqrstuvwxyz";
 let number = "0123456789";
@@ -14,5 +16,9 @@ function PassWordGenrator() {
       specialKeyWord[Math.floor(Math.random() * specialKeyWord.length)];
   }
   inputPasswod.value = Passwod;
-
 }
+copyPassword.addEventListener("click", () => {
+  inputPasswod.select();
+  document.execCommand("copy");
+});
+
