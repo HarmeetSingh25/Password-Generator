@@ -84,7 +84,7 @@ main {
 .Password_Container button {
   padding: 0.5rem;
   margin-left: 1.2rem;
-  width: 55%;
+  width: 60%;
   height: 10%;
   font-size: 1rem;
   border: none;
@@ -108,4 +108,13 @@ main {
 .Password_Container button:active {
   box-shadow: 3px 3px #0f0e0e;
   scale: 0.95;
+}
+.Extra_Feature {
+  display: flex;
+}
+.Extra_Feature button {
+  font-size: 1rem;
+  text-wrap: nowrap;
+  border-radius: 5px;
+  padding: 1.5rem 1rem;
 }
