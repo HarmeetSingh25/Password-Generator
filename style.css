@@ -118,3 +118,14 @@ main {
   border-radius: 5px;
   padding: 1.5rem 1rem;
 }
+#PasswodLength {
+  background-color: var(--second);
+  outline: 1cap;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1.5rem 1rem 0rem 1rem;
+  width: 55%;
+  font-size: 1rem;
+}
