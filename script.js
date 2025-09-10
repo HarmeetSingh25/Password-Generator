@@ -10,10 +10,11 @@ let PasswodLengthInput = document.getElementById("PasswodLength");
 let length = 0;
 PasswodLengthInput.addEventListener("click", () => {
   if (PasswodLengthInput.value < 6) {
-    // console.log("he");
+    inputPasswod.value = "Enter Number greater than 6";
 
     return;
-  } else {
+  }
+  else {
     length = PasswodLengthInput.value;
   }
 });
@@ -33,7 +34,6 @@ AddNumber.addEventListener("click", () => {
   console.log(AddNumber.dataset.correct);
 });
 
-
 AddChar.addEventListener("click", () => {
   if (AddChar.dataset.correct === "true") {
     AddChar.dataset.correct = "false";
@@ -44,7 +44,6 @@ AddChar.addEventListener("click", () => {
   }
   console.log(AddChar.dataset.correct);
 });
-
 
 AddSpecialKeyWord.addEventListener("click", () => {
   if (AddSpecialKeyWord.dataset.correct === "true") {
@@ -62,15 +61,12 @@ let lowerCase = "abcdefghijklmnopqrstuvwxyz";
 let number = "0123456789";
 let specialKeyWord = "!@#$%^&*()_+[]{}|;:,.<>?/`~";
 
-
 PasswodLengthInput.addEventListener("keyup", (e) => {
   length = Number(PasswodLengthInput.value);
 
   if (length < 12 && length > 5) {
     length = Number(PasswodLengthInput.value);
-    console.log("OK length");
   }
-  console.log("Current length:", length);
 });
 
 function PassWordGenrator() {
@@ -88,6 +84,7 @@ function PassWordGenrator() {
     }
     if (length < 6) {
       inputPasswod.value = "Error: too short";
+      return;
     }
     if (
       AddNumber.dataset.correct === "true" ||
@@ -118,7 +115,6 @@ function PassWordGenrator() {
   console.log(Passwod);
 
   inputPasswod.value = Passwod;
-  PasswodLengthInput.value = "";
 }
 
 copyPassword.addEventListener("click", () => {
